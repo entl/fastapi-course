@@ -1,4 +1,3 @@
-from typing import List
 from fastapi import Response, status, HTTPException, APIRouter
 from fastapi.params import Depends
 from sqlalchemy import func
@@ -9,7 +8,7 @@ from ..database import get_db
 router = APIRouter(prefix="/posts", tags=["Posts"])
 
 
-@router.get("/", response_model=List[schemas.PostOut])
+@router.get("/", response_model=list[schemas.PostOut])
 def get_posts(db: Session = Depends(get_db), limit: int = 10, skip: int = 0, search: str | None = ""):
     # posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
 
