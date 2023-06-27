@@ -3,6 +3,7 @@
 The project was created along with the [Python API Development](https://www.youtube.com/watch?v=0sOvCWFmrtA) course.
 
 In the project, I worked with the basic concepts of FastAPI, the principles of API, database migrations, and the authorization process.
+In addition, I have deployed project on Render instead of Heroku and set up CI/CD for Render.
 
 ## Installation
 
