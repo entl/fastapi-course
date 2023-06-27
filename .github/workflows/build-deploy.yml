@@ -15,5 +15,15 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
-      - name: test
-        run: echo "hello"
+      - name: set up python version 3.10
+        uses: actions/setuo-python@v2
+        with:
+          python-version: "3.10"
+      - name: update pip
+        run: python -m pip install --upgrade pip
+      - name: install dependencies
+        run: pip install -r requirements.txt
+      - name: run pytest
+        run: |
+          pip install pytest
+          pytest
